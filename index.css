@@ -1,0 +1,24 @@
+body{
+
+background-color: blueviolet;
+
+}
+
+.formulaire{
+ display: flex;
+justify-content: center;
+flex-direction: column;
+max-width: 200px;
+margin: 0% auto
+}
+.button-btn1{
+border: 1px solid black;
+border-radius: 15px;
+width: 
+}
+
+.button-btn2{
+border: 1px solid black;
+ border-radius: 15px;
+    }
+    

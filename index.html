@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf_8">
+<link rel="stylesheet" href="index.css">
+<title>Form Validation</title>
+
+</head>
+<body>
+
+    <form action="#" method="POST" name="myform" >
+        <div class="formulaire">
+            First name:
+            <input type="text" placeholder="firstname"  id="fname"  value=""><br>
+            Last name:
+            <input type="text" placeholder="lastname" name='lname' ><br>
+            E-mail Address:<br>
+            <input type="text" placeholder="e_mail" name="email" value=""><br>
+            Password: <br>
+            <input type="password" placeholder="your password" name="motdepasse" value=""><br>
+            Comments:<br>
+           <input type="text" name="comments" placeholder="Your comments" value=""><br>
+           <button onclick="myFunction()"   class="button-btn1"> Send</button> <br>
+           <button class="button-btn2">Reset  </button>
+        
+        </div>
+</form>
+<script>
+function myFunction(){
+    var fname =document.getElementById('fname').value;
+    var lname = document.myform.lname.value;
+    var email =document.myform.email.value;
+    var password=document.myform.motdepasse.value;
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var reg=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/
+    var comments=document.myform.comments.value;
+    // if(re.test(a)==false||document.getElemetById('fname').value=="") {
+    //     alert('please enter your first name')
+    //     alert('Please enter a valid email address')
+    //     return false;
+    if (fname==="") alert('enter first name')
+    else if (lname==="") alert('enter second name')
+    else if (email==="") alert('enter your email')
+    else if(re.test(email)==false) alert('please enter your a valid email address')
+    else if(reg.test(password)==false) alert('Please enter a valid password')
+    else if(reg.test(password)==false) alert('Please enter a valid password')
+    else if (comments==="") alert('Please enter your comments')
+}
+
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>
